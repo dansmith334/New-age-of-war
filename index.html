@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epoch Siege</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="stat"><span>Energy</span><strong id="energyText">0 / 0</strong></div>
+        <div class="stat"><span>Your Core</span><strong id="playerBaseText">0</strong></div>
+        <div class="stat"><span>Enemy Core</span><strong id="enemyBaseText">0</strong></div>
+        <div class="stat"><span>Time</span><strong id="timeText">0:00</strong></div>
+      </header>
+
+      <main class="game-wrap">
+        <canvas id="gameCanvas" width="1280" height="520" aria-label="Epoch Siege battlefield"></canvas>
+        <div class="overlay title" id="titleOverlay">
+          <h1>Epoch Siege</h1>
+          <p>Build your army, evolve your tech, crush the rival core.</p>
+          <button id="startBtn" class="cta">Start Battle</button>
+        </div>
+        <div class="overlay hidden" id="resultOverlay">
+          <h2 id="resultTitle">Victory</h2>
+          <p id="resultMsg"></p>
+          <button id="restartBtn" class="cta">Play Again</button>
+        </div>
+      </main>
+
+      <section class="controls">
+        <div class="panel">
+          <h3>Deploy Units</h3>
+          <div id="unitButtons" class="button-grid"></div>
+        </div>
+        <div class="panel">
+          <h3>Upgrades</h3>
+          <div id="upgradeButtons" class="button-grid"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
